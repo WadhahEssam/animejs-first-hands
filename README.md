@@ -1,1 +1,1 @@
-Trying out the animation library Anime.js anime.js
+Trying out the animation library Anime.js 
