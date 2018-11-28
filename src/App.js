@@ -18,13 +18,47 @@ class App extends Component {
     })
 
     anime({
+      delay: 400,
       targets: '#animated2',
-      left: '80%',
-      round: 1,
-      opacity: .8,
+      opacity: .1,
+      translateX: '240px',
+      scale: 2,
+      marginBottom: 40,
+      marginTop: 40,
       backgroundColor: '#FFF',
-    })
+      borderRadius: '50%',
+      easing: 'easeInOutQuad',
+      direction: 'alternate',
+      loop: 6,
+      rotate: '1.5turn'
+    });
 
+    anime({
+      delay: 400,
+      targets: '#animated3',
+      translateX: [-100, 100],
+      opacity: .1,
+      height: '*=2',
+      marginBottom: 40,
+      marginTop: 40,
+      backgroundColor: '#FFF',
+      easing: 'easeInOutQuad',
+      direction: 'alternate',
+      loop: 6,
+      rotate: '1.5turn'
+    });
+
+    anime({
+      delay: 400,
+      targets: '#animated4',
+      translateX: [-100, 100],
+      opacity: .1,
+      backgroundColor: '#FFF',
+      easing: 'easeInOutQuad',
+      direction: 'alternate',
+      loop: true,
+    });
+    
     var obj = { charged: 1};
     anime({
       targets: obj,
@@ -47,7 +81,7 @@ class App extends Component {
           var el = document.querySelector('#counter2');
           el.innerHTML = parseInt(obj2.charged);
         },
-        duration: 1000
+        duration: 3000
       })
       .add({
         targets: obj2,
@@ -57,7 +91,7 @@ class App extends Component {
           var el = document.querySelector('#counter2');
           el.innerHTML = parseInt(obj2.charged);
         },
-        duration: 1000
+        duration: 3000
       })
       .add({
         targets: '#mainCounter',
@@ -73,7 +107,6 @@ class App extends Component {
         targets: '#mainCounter',
         translateX: 0,
         easing: 'linear',
-        
       })
   }
 
@@ -83,7 +116,11 @@ class App extends Component {
         <header className="App-header">
           <div id="animated" style={{backgroundColor: '#43484e', height: 100, width: 100}} />
           <br />
-          <div id="animated2" style={{backgroundColor: '#43484e', height: 100, width: 100}} />
+          <div id="animated2" style={{backgroundColor: '#43484e', height: 100, width: 100, borderRadius: 10}} />
+          <br /> 
+          <div id="animated3" style={{backgroundColor: '#43484e', height: 100, width: 100, borderRadius: 10}} />
+          <br /> 
+          <div id="animated4" style={{backgroundColor: '#43484e', height: 100, width: 100, borderRadius: 10}} />
           <h1>Counter : <span id="counter"></span>%</h1>
           <br/>
           <h1 id="mainCounter">Counter : <span id="counter2"></span>%</h1>
