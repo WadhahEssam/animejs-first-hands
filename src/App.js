@@ -47,7 +47,7 @@ class App extends Component {
           var el = document.querySelector('#counter2');
           el.innerHTML = parseInt(obj2.charged);
         },
-        duration: 4000
+        duration: 1000
       })
       .add({
         targets: obj2,
@@ -57,13 +57,24 @@ class App extends Component {
           var el = document.querySelector('#counter2');
           el.innerHTML = parseInt(obj2.charged);
         },
-        duration: 4000
+        duration: 1000
       })
-      // .add({
-      //   targets: '#basicTimeline .triangle.el',
-      //   translateX: 250,
-      //   easing: 'easeOutExpo'
-      // });
+      .add({
+        targets: '#mainCounter',
+        translateX: 20,
+        easing: 'linear',
+      })
+      .add({
+        targets: '#mainCounter',
+        translateX: -20,
+        easing: 'linear',
+      })
+      .add({
+        targets: '#mainCounter',
+        translateX: 0,
+        easing: 'linear',
+        
+      })
   }
 
   render() {
@@ -75,7 +86,7 @@ class App extends Component {
           <div id="animated2" style={{backgroundColor: '#43484e', height: 100, width: 100}} />
           <h1>Counter : <span id="counter"></span>%</h1>
           <br/>
-          <h1>Counter : <span id="counter2"></span>%</h1>
+          <h1 id="mainCounter">Counter : <span id="counter2"></span>%</h1>
         </header>
       </div>
     );
