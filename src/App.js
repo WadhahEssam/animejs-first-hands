@@ -115,6 +115,8 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <svg width="150" height="150" style={{border: '1px solid white', marginBottom: 10}}>
+          <svg width="500" height="500" style={{border: '1px solid white', marginBottom: 10}}>
+          <rect x="100" y="250" rx="20" ry="20" width="150" height="150" />
             <circle cx="75" cy="75" r="50" stroke="#8C5650" strokeWidth="3" fill="#C2776F" />
             Sorry, your browser does not support inline SVG.
           </svg> 
