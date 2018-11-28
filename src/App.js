@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import anime from 'animejs';
 
@@ -9,24 +8,18 @@ class App extends Component {
       targets: '#animated',
       translateX: [
         { value: 100, duration: 1200 },
-        { value: 0, duration: 800 }
+        { value: 50, duration: 800 }
       ],
-      rotate: '1turn',
       backgroundColor: '#FFF',
-      duration: 2000,
+      duration: 4000,
       loop: true
     })
 
     anime({
       targets: '#animated2',
-      translateX: [
-        { value: 5, duration: 1200 },
-        { value: 0, duration: 800 }
-      ],
-      rotate: '2turn',
+      left: '80%',
+      opacity: .8,
       backgroundColor: '#FFF',
-      duration: 5000,
-      loop: true
     })
   }
 
