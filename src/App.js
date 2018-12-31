@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import anime from 'animejs';
-import testSvg from './test-icon.svg';
+import testSvg from './test-icon-svg.svg';
 
 class App extends Component {
 
